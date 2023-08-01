@@ -21,7 +21,6 @@ public class Voyage {
     private List<CargoObject> cargoObjectList;
     private String captainName;
     private Integer crewCount;
-
     public void clearId(){
         this.id = null;
     }
