@@ -117,7 +117,7 @@ public class ShipResponse implements Controller {
             return new ResponseEntity<>(foundShip, HttpStatusCode.valueOf(200));
         }
         else {
-            return new ResponseEntity<>(foundShip, HttpStatusCode.valueOf(404));
+            return new ResponseEntity<>(null, HttpStatusCode.valueOf(404));
         }
 
     }
