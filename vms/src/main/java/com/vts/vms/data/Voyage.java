@@ -25,12 +25,4 @@ public class Voyage {
     public void clearId(){
         this.id = null;
     }
-    public Voyage(Ship ship, String departurePortName, String destinationPortName, List<CargoObject> cargoObjectList, String captainName, Integer crewCount) {
-        this.ship = ship;
-        this.departurePortName = departurePortName;
-        this.destinationPortName = destinationPortName;
-        this.cargoObjectList = cargoObjectList;
-        this.captainName = captainName;
-        this.crewCount = crewCount;
-    }
 }

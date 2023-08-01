@@ -4,10 +4,12 @@ import com.vts.vms.data.enumeration.Flag;
 import com.vts.vms.data.enumeration.ShipType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Ship{
     private String id;
     private String imo; //3 letters 7 digits, 10 chars total

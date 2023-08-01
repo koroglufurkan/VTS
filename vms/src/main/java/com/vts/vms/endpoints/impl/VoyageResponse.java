@@ -69,19 +69,14 @@ public class VoyageResponse implements Controller {
             return new ResponseEntity<>(null, HttpStatusCode.valueOf(404));
         }
     }
-    public ResponseEntity<Voyage> deleteVoyageByShipId(String id) {
+    public void deleteVoyageByShipId(String id) {
         Voyage foundVoyage;
         Query query = new Query();
         query.addCriteria(Criteria.where("ship.id").is(id));
         if((foundVoyage = mongoTemplate.findOne(query, Voyage.class)) != null)
         {
             voyageRepository.deleteById(foundVoyage.getId());
-            return new ResponseEntity<>(foundVoyage, HttpStatusCode.valueOf(200));
         }
-        else {
-            return new ResponseEntity<>(null, HttpStatusCode.valueOf(404));
-        }
-
     }
     public ResponseEntity<Voyage> deleteVoyageById(String id) {
         Voyage foundVoyage;
