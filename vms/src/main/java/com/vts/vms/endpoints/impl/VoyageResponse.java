@@ -83,6 +83,19 @@ public class VoyageResponse implements Controller {
         }
 
     }
+    public ResponseEntity<Voyage> deleteVoyageById(String id) {
+        Voyage foundVoyage;
+        Query query = new Query();
+        query.addCriteria(Criteria.where("id").is(id));
+        if((foundVoyage = mongoTemplate.findOne(query, Voyage.class)) != null)
+        {
+            voyageRepository.deleteById(foundVoyage.getId());
+            return new ResponseEntity<>(foundVoyage, HttpStatusCode.valueOf(200));
+        }
+        else {
+            return new ResponseEntity<>(null, HttpStatusCode.valueOf(404));
+        }
+    }
     public Voyage updateVoyageByIdMethod(String id,Voyage voyage) {
         if (voyageRepository.findById(id).orElse(null) != null) {
             voyage.setId(id);

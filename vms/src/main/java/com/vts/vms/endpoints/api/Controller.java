@@ -20,7 +20,7 @@ public interface Controller {
     ResponseEntity<Voyage> updateVoyageById(@PathVariable String id, @RequestBody Voyage voyage);
     //DeleteVoyageById
     @DeleteMapping("/{id}")
-    ResponseEntity<Voyage> deleteVoyageByShipId(@PathVariable String id);
+    ResponseEntity<Voyage> deleteVoyageById(@PathVariable String id);
 
 
 }
