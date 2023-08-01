@@ -1,7 +1,6 @@
 package com.vts.sms.core.kafka;
 
 import com.vts.sms.data.Ship;
-import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.config.TopicBuilder;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -10,18 +9,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class TopicManager {
     private final KafkaTemplate<Integer, Ship> shipTemplate;
-//    private final KafkaTemplate<Integer, Ship[]> shipsTemplate;
-    private final NewTopic shipAdd;
-    private final NewTopic shipUpdate;
-    private final NewTopic shipDelete;
 
     //shipTemplate will be auto-wired
     @Autowired
     public TopicManager(KafkaTemplate<Integer, Ship> shipTemplate)
     {
-        shipAdd = TopicBuilder.name("shipAdd").build();
-        shipUpdate = TopicBuilder.name("shipUpdate").build();
-        shipDelete = TopicBuilder.name("shipDelete").build();
+        TopicBuilder.name("shipAdd").build();
+        TopicBuilder.name("shipUpdate").build();
+        TopicBuilder.name("shipDelete").build();
         this.shipTemplate = shipTemplate;
     }
 
