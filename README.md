@@ -14,3 +14,4 @@ Ports:
 - localhost:8080 SMS port
 - localhost:8081 VMS port
 - localhost:27017 MongoDB database port
+- localhost:29092 Kafka Client
