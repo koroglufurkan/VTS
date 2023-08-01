@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Document(collection = "voyages")
+@Document(collection = "Voyages")
 public class Voyage {
     @Id
     private String id;
@@ -21,16 +21,7 @@ public class Voyage {
     private List<CargoObject> cargoObjectList;
     private String captainName;
     private Integer crewCount;
-
     public void clearId(){
         this.id = null;
-    }
-    public Voyage(Ship ship, String departurePortName, String destinationPortName, List<CargoObject> cargoObjectList, String captainName, Integer crewCount) {
-        this.ship = ship;
-        this.departurePortName = departurePortName;
-        this.destinationPortName = destinationPortName;
-        this.cargoObjectList = cargoObjectList;
-        this.captainName = captainName;
-        this.crewCount = crewCount;
     }
 }
