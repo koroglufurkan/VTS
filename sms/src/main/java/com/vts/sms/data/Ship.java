@@ -33,26 +33,7 @@ public class Ship {
     private Integer callSign;
     private Flag flag;
 
-    public void clearId()
-    {
+    public void clearId() {
         this.id = null;
-    }
-    public Ship(String imo, String mmsi, String name, ShipType type, Date constructionYear, int breadthCm, int deadWeightTonnageTons, int draughtCm, int lengthCm, int grossTonnageTons, int netTonnageTons, Integer callSign, Flag flag) {
-        this.imo = imo;
-        this.mmsi = mmsi;
-        this.name = name;
-        this.type = type;
-        this.constructionYear = constructionYear;
-        this.breadthCm = breadthCm;
-        this.deadWeightTonnageTons = deadWeightTonnageTons;
-        this.draughtCm = draughtCm;
-        this.lengthCm = lengthCm;
-        this.grossTonnageTons = grossTonnageTons;
-        this.netTonnageTons = netTonnageTons;
-        this.callSign = callSign;
-        this.flag = flag;
-    }
-
-    public Ship(){
     }
 }
