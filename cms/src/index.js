@@ -1,17 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Import react (essential) and reactdom (for components on browsers) libraries
+import React from "react";
+import ReactDOM from "react-dom/client"
+import App from "./App";
+// Get a reference to the diw with ID root
+const el = document.getElementById("root");
+// Tell React to take control of that element
+const root = ReactDOM.createRoot(el);
+// Create a component in the file App.js, import in here
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Show the component on the screen
+root.render(<App />);
