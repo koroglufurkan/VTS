@@ -1,12 +1,23 @@
-import React from "react";
+import React from "react"
 //No extension if js file
-import ProfileCard from "./ProfileCard";
+import ProfileCard from "./ProfileCard"
 //Import only if images are local
 import AlexaImage from "./images/alexa.png"
 import SiriImage from "./images/siri.png"
 import CortanaImage from "./images/cortana.png"
 import "bulma/css/bulma.css"
+import {useState} from "react"
+import AnimalShow from "./AnimalShow"
 function App() {
+    const [count, setCount] = useState(0);
+    const handleClick = () => {
+        console.log("Button was clicked")
+        setCount(count+1);
+        console.log(count);
+    };
+
+
+
     return (
         <div>
             <h1>Vessel Traffic Service</h1>
@@ -51,7 +62,16 @@ function App() {
                     </div>
                 </div>
             </section>
+
+            <div>
+                <button onClick={handleClick}>
+                    Add Animal
+                </button>
+                <div>Number of Animals: {count}</div>
+            </div>
         </div>
+
+
     );
 }
 export default App;
